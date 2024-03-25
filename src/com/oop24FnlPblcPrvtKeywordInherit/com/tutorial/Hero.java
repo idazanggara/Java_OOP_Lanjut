@@ -10,12 +10,25 @@ public class Hero {
   }
 
   // getter
-  double getHealth() {
+  public double getHealth() {
     return this.health;
   }
 
-  void display() {
+  public void display() {
     System.out.println(this.name + " mempunyai  " + this.health);
+  }
+
+  // setter
+  final void setHealth(double newHealth) {
+    this.health = newHealth;
+  }
+
+  // kita coba overload
+  // dan bisa di overload, baik gunakan final dan tanpa final
+  void setHealth(String mode) {
+    if (mode.equals("reset")) {
+      this.health = 100;
+    }
   }
 
 }
